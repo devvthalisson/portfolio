@@ -9,7 +9,7 @@ export function Hero() {
     },
     children: {
       hidden: { opacity: 0, y: 20 },
-      visible: { opacity: 1, y: 0 },
+      visible: { opacity: 1, y: 0, transition: { ease: "easeInOut" } },
     },
     image: {
       hidden: { opacity: 0, x: 50 },
@@ -23,7 +23,8 @@ export function Hero() {
         <motion.div
           variants={animateElements.container}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <motion.div className="flex flex-col gap-6">
             <motion.div

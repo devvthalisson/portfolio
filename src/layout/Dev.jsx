@@ -8,6 +8,10 @@ export function Dev() {
       visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
     },
     children: {
+      hidden: { opacity: 0, y: -50 },
+      visible: { opacity: 1, y: 0 },
+    },
+    cards: {
       hidden: { opacity: 0, x: 50 },
       visible: { opacity: 1, x: 0 },
     },
@@ -31,7 +35,7 @@ export function Dev() {
         <motion.div className="grid md:grid-cols-2 grid-rows-2 gap-8">
           <motion.div
             className="p-8 border-2 border-slate-300 rounded-lg hover:border-blue-700 hover:bg-slate-50 transition-all shadow-md"
-            variants={animateElements.children}
+            variants={animateElements.cards}
           >
             <CodeXml size={24} className="h-8 w-8 text-blue-700 mb-4" />
             <h3 className="text-xl font-semibold text-slate-950 mb-2">
@@ -44,7 +48,7 @@ export function Dev() {
           </motion.div>
           <motion.div
             className="p-8 border-2 border-slate-300 rounded-lg hover:border-blue-700 hover:bg-slate-50 transition-all shadow-md"
-            variants={animateElements.children}
+            variants={animateElements.cards}
           >
             <Zap size={24} className="h-8 w-8 text-blue-700 mb-4" />
             <motion.h3 className="text-xl font-semibold text-slate-950 mb-2">
@@ -57,7 +61,7 @@ export function Dev() {
           </motion.div>
           <motion.div
             className="p-8 border-2 border-slate-300 rounded-lg hover:border-blue-700 hover:bg-slate-50 transition-all shadow-md"
-            variants={animateElements.children}
+            variants={animateElements.cards}
           >
             <Link size={24} className="h-8 w-8 text-blue-700 mb-4" />
             <motion.h3 className="text-xl font-semibold text-slate-950 mb-2">
@@ -69,7 +73,7 @@ export function Dev() {
           </motion.div>
           <motion.div
             className="p-8 border-2 border-slate-300 rounded-lg hover:border-blue-700 hover:bg-slate-50 transition-all shadow-md"
-            variants={animateElements.children}
+            variants={animateElements.cards}
           >
             <Globe size={24} className="h-8 w-8 text-blue-700 mb-4" />
             <motion.h3 className="text-xl font-semibold text-slate-950 mb-2">
