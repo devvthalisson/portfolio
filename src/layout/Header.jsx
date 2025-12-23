@@ -1,43 +1,23 @@
+import { motion } from "motion/react";
+import { useState } from "react";
+import { Navbar } from "./Navbar";
+
 export function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="navbar bg-base-100 shadow-sm">
-      <div className="navbar-start">
-        <div>TM</div>
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+      <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+        <motion.div
+          className="text-xl text-slate-900 font-semibold"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeIn" }}
+        >
+          TM
+        </motion.div>
+        <Navbar />
       </div>
-      <nav className="navbar-end">
-        <div className="dropdown">
-          <div className="btn btn-ghost md:hidden" role="button" tabIndex="0">
-            BUTTON
-          </div>
-          <ul
-            tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >
-            <li>
-              <a href="#">Projetos</a>
-            </li>
-            <li>
-              <a href="#">Sobre</a>
-            </li>
-            <li>
-              <a href="#">Contato</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <nav className="navbar-end hidden md:flex">
-        <ul>
-          <li>
-            <a href="#">Projetos</a>
-          </li>
-          <li>
-            <a href="#">Sobre</a>
-          </li>
-          <li>
-            <a href="#">Contato</a>
-          </li>
-        </ul>
-      </nav>
     </header>
   );
 }
