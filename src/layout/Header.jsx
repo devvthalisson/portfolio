@@ -1,11 +1,8 @@
 import { motion } from "motion/react";
-import { useState } from "react";
 import { Navbar } from "./Navbar";
 import { scrollTo } from "../scripts/scrollTo";
 
 export function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white backdrop-blur-md h-15">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
@@ -13,7 +10,6 @@ export function Header() {
           className="text-xl text-slate-900 font-semibold select-none cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ ease: "easeIn", duration: 1 }}
           onClick={() => scrollTo("index")}
         >
           TM

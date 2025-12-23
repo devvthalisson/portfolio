@@ -17,7 +17,7 @@ export function Navbar() {
         hidden: { opacity: 0 },
         visible: {
           opacity: 1,
-          transition: { staggerChildren: 0.15, ease: "easeIn", duration: 1 },
+          transition: { staggerChildren: 0.15, duration: 1, ease: "easeInOut" },
         },
       },
       mobile: {
@@ -33,7 +33,7 @@ export function Navbar() {
     },
     items: {
       hidden: { opacity: 0 },
-      visible: { opacity: 1, ease: "easeIn", duration: 2 },
+      visible: { opacity: 1, transition: { ease: "easeInOut", duration: 1 } },
     },
   };
 

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import { scrollTo } from "../scripts/scrollTo";
 
 export function Hero() {
   const animateElements = {
@@ -69,18 +70,18 @@ export function Hero() {
             className="flex flex-col gap-6 mt-8 sm:flex-row"
             variants={animateElements.children}
           >
-            <a
-              href="#"
+            <button
+              onClick={() => scrollTo("projetos")}
               className="flex items-center justify-center gap-2 whitespace-nowrap transition-colors rounded-md text-sm font-medium px-4 py-2 bg-blue-700 text-white min-h-9 active:shadow-none hover:bg-blue-800"
             >
               Ver projetos <ArrowRight size={20} />
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() => scrollTo("contato")}
               className="flex items-center justify-center  transition-colors rounded-md border border-slate-400 text-slate-900 text-sm font-medium px-4 py-2 active:shadow-none hover:bg-slate-100"
             >
               Falar comigo
-            </a>
+            </button>
           </motion.div>
         </motion.div>
         <motion.div
@@ -89,7 +90,7 @@ export function Hero() {
           initial="hidden"
           animate="visible"
         >
-          IMAGE
+          
         </motion.div>
       </div>
     </section>
