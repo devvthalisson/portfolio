@@ -5,15 +5,26 @@ export function Hero() {
   const animateElements = {
     container: {
       hidden: { opacity: 0 },
-      visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+      visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.15, duration: 1 },
+      },
     },
     children: {
       hidden: { opacity: 0, y: 20 },
-      visible: { opacity: 1, y: 0, transition: { ease: "easeInOut" } },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { ease: "easeInOut", duration: 1 },
+      },
     },
     image: {
       hidden: { opacity: 0, x: 50 },
-      visible: { opacity: 1, x: 0, transition: { ease: "linear" } },
+      visible: {
+        opacity: 1,
+        x: 0,
+        transition: { ease: "linear", duration: 1 },
+      },
     },
   };
 
@@ -28,7 +39,7 @@ export function Hero() {
         >
           <motion.div className="flex flex-col gap-6">
             <motion.div
-              className="bg-blue-100 w-fit text-xs px-3 py-1 rounded-full text-blue-700 font-semibold"
+              className="bg-blue-100 w-fit text-xs px-3 py-1 rounded-full text-blue-700 font-bold"
               variants={animateElements.children}
             >
               Soluções digitais para o seu negócio

@@ -9,7 +9,11 @@ export function Projects() {
     },
     children: {
       hidden: { opacity: 0, y: 50 },
-      visible: { opacity: 1, y: 0 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1, ease: "easeInOut" },
+      },
     },
   };
 
@@ -51,6 +55,10 @@ export function Projects() {
         </motion.h2>
         <motion.div
           className={`grid md:grid-cols-${projectsList.length} gap-6`}
+          variants={animateElements.container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           {projectsList.map((project) => (
             <motion.div

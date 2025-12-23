@@ -3,6 +3,7 @@ import { Hero } from "./layout/Hero";
 import { About } from "./layout/About";
 import { Dev } from "./layout/Dev";
 import { Projects } from "./layout/Projects";
+import { HowToWork } from "./layout/HowToWork";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <About />
       <Dev />
       <Projects />
+      <HowToWork />
     </main>
   );
 }

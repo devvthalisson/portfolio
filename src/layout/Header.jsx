@@ -13,7 +13,7 @@ export function Header() {
           className="text-xl text-slate-900 font-semibold select-none cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ ease: "easeIn" }}
+          transition={{ ease: "easeIn", duration: 1 }}
           onClick={() => scrollTo("index")}
         >
           TM

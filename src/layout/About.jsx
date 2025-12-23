@@ -8,7 +8,11 @@ export function About() {
     },
     children: {
       hidden: { opacity: 0, y: 50 },
-      visible: { opacity: 1, y: 0 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1, ease: "easeInOut" },
+      },
     },
     cardsHover: {
       scale: 1.05,

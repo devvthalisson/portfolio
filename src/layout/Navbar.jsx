@@ -17,7 +17,7 @@ export function Navbar() {
         hidden: { opacity: 0 },
         visible: {
           opacity: 1,
-          transition: { staggerChildren: 0.15, ease: "linear" },
+          transition: { staggerChildren: 0.15, ease: "easeIn", duration: 1 },
         },
       },
       mobile: {
@@ -33,7 +33,7 @@ export function Navbar() {
     },
     items: {
       hidden: { opacity: 0 },
-      visible: { opacity: 1 },
+      visible: { opacity: 1, ease: "easeIn", duration: 2 },
     },
   };
 
@@ -66,7 +66,12 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.9, y: 1 }}
-            transition={{ type: "spring", stiffness: 300, damping: 9 }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 9,
+              duration: 1,
+            }}
             onClick={toggleMenu}
           >
             <Logs size={23} />
