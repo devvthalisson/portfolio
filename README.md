@@ -1,16 +1,66 @@
-# React + Vite
+# 🚀 Portfólio – Thalisson Menezes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio profissional 👋  
+Este repositório contém o código-fonte do meu site pessoal, onde apresento meus projetos, serviços e minha trajetória como desenvolvedor.
 
-Currently, two official plugins are available:
+🌐 **Acesse:** https://devvthalisson.com.br
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 👨‍💻 Sobre mim
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Meu nome é **Thalisson Menezes** e sou desenvolvedor de software apaixonado por tecnologia desde cedo.  
+Comecei a programar ainda no ensino fundamental, aos 12 anos, e desde então venho construindo soluções práticas voltadas para **automação, sistemas internos e pequenos negócios**.
 
-## Expanding the ESLint configuration
+Atualmente, foco em criar sistemas que resolvem problemas reais, com código limpo, interfaces simples e soluções eficientes — sempre pensando na usabilidade e no impacto para o negócio.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 O que você encontra neste portfólio
+
+- Apresentação profissional
+- Projetos desenvolvidos (sistemas, APIs, automações)
+- Tecnologias que utilizo no dia a dia
+- Formas de contato
+- Links para redes profissionais (LinkedIn, GitHub)
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- **Frontend:** React, HTML, CSS, JavaScript
+- **Versionamento:** Git & GitHub
+- **Deploy:** GitHub Pages
+- **SEO & Métricas:** Google Search Console, Plausible / Google Analytics
+
+---
+
+## 🌍 Publicação
+
+O site está hospedado utilizando **GitHub Pages** e configurado com domínio personalizado registrado no **Registro.br**.
+
+---
+
+## 📈 Objetivo do portfólio
+
+Este portfólio tem como objetivo:
+
+- Apresentar meu trabalho de forma clara e profissional
+- Atrair **freelancers, pequenos negócios, academias e comércios locais**
+- Demonstrar minha capacidade de resolver problemas com tecnologia
+- Servir como base para networking e oportunidades profissionais
+
+---
+
+## 📬 Contato
+
+- 🌐 Site: [\[_(adicione aqui seu link)_ \](https://devvthalisson.com.br) ](https://devvthalisson.com.br)
+- 💼 LinkedIn: [\[_(adicione aqui seu link)_ \](https://www.linkedin.com/in/devvthalisson) ](https://www.linkedin.com/in/devvthalisson)
+- 🧑‍💻 GitHub: [\[_(adicione aqui seu link)_ \](https://github.com/devvthalisson) ](https://github.com/devvthalisson)
+
+Fique à vontade para entrar em contato.  
+Será um prazer conversar sobre tecnologia e soluções digitais.
+
+---
+
+⭐ Se este projeto te ajudou ou chamou sua atenção, considere deixar uma estrela no repositório!
