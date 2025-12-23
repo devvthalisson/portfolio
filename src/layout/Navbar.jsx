@@ -73,7 +73,7 @@ export function Navbar() {
                 initial="hidden"
                 animate="visible"
                 exit={{ opacity: 0, scale: 0, y: -60, x: 20 }}
-                className="absolute flex p-3 w-32 mt-3 flex-col gap-3 bg-white right-0 shadow md:hidden"
+                className="absolute flex p-3 w-32 mt-3 flex-col gap-3 bg-white right-0 shadow md:hidden rounded"
               >
                 {listMenu.map((item) => (
                   <motion.li key={item.name} variants={animateElements.items}>

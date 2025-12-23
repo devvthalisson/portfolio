@@ -1,13 +1,11 @@
-import { useState } from "react";
 import { Header } from "./layout/Header";
+import { Hero } from "./layout/Hero";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Header />
-      <p className="text-2xl text-black">i'm coding</p>
+      <Hero />
     </>
   );
 }
