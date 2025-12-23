@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { AnimatePresence } from "motion/react";
 import { Logs } from "lucide-react";
+import { scrollTo } from "../scripts/scrollTo";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -38,16 +39,20 @@ export function Navbar() {
 
   const listMenu = [
     {
+      name: "Inicio",
+      href: "index",
+    },
+    {
       name: "Projetos",
-      href: "#",
+      href: "projetos",
     },
     {
       name: "Sobre",
-      href: "#",
+      href: "sobre",
     },
     {
       name: "Contato",
-      href: "#",
+      href: "contato",
     },
   ];
 
@@ -74,15 +79,16 @@ export function Navbar() {
                 animate="visible"
                 exit={{ opacity: 0, scale: 0, y: -60, x: 20 }}
                 className="absolute flex p-3 w-32 mt-3 flex-col gap-3 bg-white right-0 shadow md:hidden rounded"
+                onClick={toggleMenu}
               >
                 {listMenu.map((item) => (
-                  <motion.li key={item.name} variants={animateElements.items}>
-                    <a
-                      href={item.href}
-                      className="text-slate-600 active:text-slate-900"
-                    >
-                      {item.name}
-                    </a>
+                  <motion.li
+                    key={item.name}
+                    variants={animateElements.items}
+                    className="text-slate-600 active:text-slate-900"
+                    onClick={() => scrollTo(item.href)}
+                  >
+                    {item.name}
                   </motion.li>
                 ))}
               </motion.ul>
@@ -101,8 +107,8 @@ export function Navbar() {
             <motion.li
               className="text-slate-500 cursor-pointer hover:text-slate-900"
               key={item.name}
-              href={item.href}
               variants={animateElements.items}
+              onClick={() => scrollTo(item.href)}
             >
               {item.name}
             </motion.li>

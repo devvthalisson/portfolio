@@ -16,7 +16,10 @@ export function About() {
   };
 
   return (
-    <section className="px-6 py-24 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section
+      className="px-6 py-24 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900"
+      id="sobre"
+    >
       <motion.div
         className="mx-auto max-w-6xl"
         variants={animateElements.container}

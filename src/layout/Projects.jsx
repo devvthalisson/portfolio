@@ -36,7 +36,7 @@ export function Projects() {
   ];
 
   return (
-    <section className="px-6 py-24 bg-slate-950">
+    <section className="px-6 py-24 bg-slate-950" id="projetos">
       <motion.div
         className="mx-auto max-w-6xl"
         initial="hidden"
@@ -84,7 +84,10 @@ export function Projects() {
                 </motion.div>
                 <motion.div className="mb-4 flex flex-wrap gap-2">
                   {project.languages.map((language) => (
-                    <motion.span className="text-xs bg-slate-700 text-blue-400 px-2 py-1 rounded">
+                    <motion.span
+                      className="text-xs bg-slate-700 text-blue-400 px-2 py-1 rounded"
+                      key={language}
+                    >
                       {language}
                     </motion.span>
                   ))}

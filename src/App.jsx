@@ -6,7 +6,7 @@ import { Projects } from "./layout/Projects";
 
 function App() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen" id="index">
       <Header />
       <Hero />
       <About />
