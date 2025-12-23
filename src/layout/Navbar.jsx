@@ -10,14 +10,30 @@ export function Navbar() {
     setOpen(!open);
   };
 
-  const navbar = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.15, ease: 'linear' } },
-  };
-
-  const items = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+  const animateElements = {
+    navbar: {
+      normal: {
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { staggerChildren: 0.15, ease: "linear" },
+        },
+      },
+      mobile: {
+        hidden: { opacity: 0, scale: 0, y: -60, x: 20 },
+        visible: {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          x: 0,
+          transition: { staggerChildren: 0.15 },
+        },
+      },
+    },
+    items: {
+      hidden: { opacity: 0 },
+      visible: { opacity: 1 },
+    },
   };
 
   const listMenu = [
@@ -41,6 +57,8 @@ export function Navbar() {
         <div className="relative">
           <motion.div
             className="md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.9, y: 1 }}
             transition={{ type: "spring", stiffness: 300, damping: 9 }}
@@ -51,27 +69,22 @@ export function Navbar() {
           <AnimatePresence>
             {open && (
               <motion.ul
-                initial={{ opacity: 0, scale: 0, y: -60, x: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0, x: 0 }}
+                variants={animateElements.navbar.mobile}
+                initial="hidden"
+                animate="visible"
                 exit={{ opacity: 0, scale: 0, y: -60, x: 20 }}
-                tabIndex="-1"
-                className={`absolute flex p-3 w-32 mt-3 flex-col gap-3 bg-white right-0 shadow md:hidden`}
+                className="absolute flex p-3 w-32 mt-3 flex-col gap-3 bg-white right-0 shadow md:hidden"
               >
-                <li>
-                  <a href="#" className="text-sm">
-                    Projetos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm">
-                    Sobre
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm">
-                    Contato
-                  </a>
-                </li>
+                {listMenu.map((item) => (
+                  <motion.li key={item.name} variants={animateElements.items}>
+                    <a
+                      href={item.href}
+                      className="text-slate-600 active:text-slate-900"
+                    >
+                      {item.name}
+                    </a>
+                  </motion.li>
+                ))}
               </motion.ul>
             )}
           </AnimatePresence>
@@ -80,15 +93,16 @@ export function Navbar() {
       <nav className="hidden md:flex">
         <motion.ul
           className="flex gap-8"
-          variants={navbar}
+          variants={animateElements.navbar.normal}
           initial="hidden"
           animate="visible"
         >
           {listMenu.map((item) => (
             <motion.li
+              className="text-slate-500 cursor-pointer hover:text-slate-900"
               key={item.name}
               href={item.href}
-              variants={items}
+              variants={animateElements.items}
             >
               {item.name}
             </motion.li>
