@@ -54,9 +54,9 @@ Este portfólio tem como objetivo:
 
 ## 📬 Contato
 
-- 🌐 Site: [\[_(adicione aqui seu link)_ \](https://devvthalisson.com.br) ](https://devvthalisson.com.br)
-- 💼 LinkedIn: [\[_(adicione aqui seu link)_ \](https://www.linkedin.com/in/devvthalisson) ](https://www.linkedin.com/in/devvthalisson)
-- 🧑‍💻 GitHub: [\[_(adicione aqui seu link)_ \](https://github.com/devvthalisson) ](https://github.com/devvthalisson)
+- 🌐 Site: https://devvthalisson.com.br
+- 💼 LinkedIn: https://www.linkedin.com/in/devvthalisson
+- 🧑‍💻 GitHub: https://github.com/devvthalisson
 
 Fique à vontade para entrar em contato.  
 Será um prazer conversar sobre tecnologia e soluções digitais.
