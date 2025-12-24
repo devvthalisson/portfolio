@@ -70,18 +70,20 @@ export function Hero() {
             className="flex flex-col gap-6 mt-8 sm:flex-row"
             variants={animateElements.children}
           >
-            <button
+            <motion.button
               onClick={() => scrollTo("projetos")}
-              className="flex items-center justify-center gap-2 whitespace-nowrap transition-colors rounded-md text-sm font-medium px-4 py-2 bg-blue-700 text-white min-h-9 active:shadow-none hover:bg-blue-800"
+              whileHover={{ scale: 1.1 }}
+              className="flex items-center justify-center gap-2 whitespace-nowrap transition-colors rounded-md text-sm font-medium px-4 py-2 bg-blue-700 text-white min-h-9 active:shadow-none hover:bg-blue-800 cursor-pointer"
             >
               Ver projetos <ArrowRight size={20} />
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={() => scrollTo("contato")}
-              className="flex items-center justify-center  transition-colors rounded-md border border-slate-400 text-slate-900 text-sm font-medium px-4 py-2 active:shadow-none hover:bg-slate-100"
+              whileHover={{ scale: 1.1 }}
+              className="flex items-center justify-center  transition-colors rounded-md border border-slate-400 text-slate-900 text-sm font-medium px-4 py-2 active:shadow-none hover:bg-slate-100 cursor-pointer"
             >
               Falar comigo
-            </button>
+            </motion.button>
           </motion.div>
         </motion.div>
         <motion.div
@@ -89,9 +91,7 @@ export function Hero() {
           variants={animateElements.image}
           initial="hidden"
           animate="visible"
-        >
-          
-        </motion.div>
+        ></motion.div>
       </div>
     </section>
   );
